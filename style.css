@@ -1,0 +1,1409 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        /* ============================
+           HERO SECTION
+        ============================ */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background-image: url('img/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #333;
+            max-width: 600px;
+            padding: 0 20px;
+            margin-top: -40px;
+        }
+
+        .wedding-names {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 60px;
+            font-weight: bold;
+            margin: 20px 0 40px;
+            color: #333;
+            animation: fadeIn 1.5s ease;
+            /* margin-bottom: 590px; */
+        }
+
+        .hero-divider {
+            width: 200px;
+            height: 1px;
+            background: #000000;
+            /* margin-top: 1px; */
+            margin: auto;
+            margin-bottom: -30px;
+        }
+        .content-date {
+            margin-top: 450px;
+        }
+        .hero-invitation {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: #666;
+            margin: 30px 0 15px;
+            text-transform: uppercase;
+
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .date-wrapper {
+            margin-top: 40px;
+        }
+
+        .date-weekday {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .date-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            margin: 15px 0;
+            color: #333;
+        }
+        .date-year,
+        .date-day,
+        .date-month {
+            font-size: 50px;
+            line-height: 1;
+        }
+
+
+        .date-sub {
+            font-style: italic;
+            font-size: 14px;
+            opacity: 0.8;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* ============================
+           SNOW EFFECT
+        ============================ */
+        .snow {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .snow span {
+            position: absolute;
+            top: -10px;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: snowFall linear infinite;
+        }
+
+        @keyframes snowFall {
+            0% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh);
+                opacity: 0.2;
+            }
+        }
+
+        /* ============================
+           STORY SECTION
+        ============================ */
+        .story-section {
+            background: #f2f2f2;
+            padding: 60px 20px;
+        }
+
+        .story-box {
+            background: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .story-icon {
+            width: 80px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .story-title {
+            font-weight: 700;
+            font-size: 28px;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .story-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* ============================
+           COUPLE INTRO SECTION
+        ============================ */
+        .couple-section {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            margin-left: -50vw;
+
+            /* background: linear-gradient(135deg, #f8f9fb 0%, #cfd9ea 100%); */
+
+            padding: 70px 24px 60px;
+            margin-top: 30px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .couple-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Chú rể: Text trái - Ảnh phải */
+        .groom-card {
+            display: grid;
+            grid-template-columns: 1fr 180px;
+            gap: 0px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .groom-info {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .groom-photo {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 5px solid #fff;
+        }
+
+        /* Cô dâu: Ảnh trái - Text phải */
+        .bride-card {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 0px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .bride-photo {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 5px solid #fff;
+        }
+
+        .bride-info {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .couple-role {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #667eea;
+            margin-bottom: 3px;
+        }
+
+        .couple-parents {
+            font-size: 9px;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .couple-label {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 2px;
+        }
+
+        .couple-name {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 34px;
+            color: #333;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .bride-name {
+            color: #764ba2;
+        }
+
+        /* Lời mời */
+        .invitation-box {
+            text-align: center;
+            padding: 20px 20px;
+            border-top: 2px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        .invitation-title {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 40px;
+            color: #667eea;
+            margin-bottom: 12px;
+        }
+
+        .invitation-text {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            color: #555;
+            line-height: 1.6;
+            white-space: nowrap;
+        }
+        .event-photos {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .event-photo {
+            width: 100px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .event-photo:nth-child(2) {
+            width: 120px;
+            height: 160px;
+            margin-top: -10px;
+        }
+        .event-cards {
+            margin-top: 40px;
+        }
+
+        .event-card {
+            background: linear-gradient(135deg, #e8f4fd 0%, #d4e7f7 100%);
+            border-radius: 20px;
+            padding: 35px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-card h3 {
+            font-size: clamp(15px, 3vw, 18px);
+            font-weight: 700;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+        }
+
+
+        .event-time {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .event-date {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: 3px;
+            margin: 10px 0;
+        }
+
+        .event-location {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .event-address {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .event-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 20px;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .event-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        /* ============================
+           ALBUM SECTION
+        ============================ */
+/* ==== ALBUM SECTION ==== */
+.album-section {
+    background: #fff;
+    padding: 60px 20px -1px;
+    text-align: center;
+}
+
+/* ==== TITLE ==== */
+.album-title p {
+    font-family: "Pinyon Script", cursive;
+    font-size: 23px;
+    color: #2c5aa0;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+
+/* Masonry grid */
+.album-masonry {
+    max-width: 900px;
+    margin: 0 auto;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+/* Item */
+.album-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+.album-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.20);
+}
+
+.album-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Different heights */
+.album-item-tall img {
+    height: 250px;
+}
+
+.album-item-medium img {
+    height: 250px;
+}
+
+.album-item-short img {
+    height: 250px;
+}
+
+
+        /* ============================
+           CALENDAR SECTION
+        ============================ */
+        .schedule-section {
+            background: #fff;
+            /* padding: 60px 20px; */
+        }
+
+        .calendar-box {
+            background: #ffffff;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+
+        }
+        .calendar-month {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .calendar-table th {
+            padding: 15px 8px;
+            font-weight: 600;
+            color: #666;
+            font-size: 14px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .calendar-table td {
+            padding: 15px 8px;
+            text-align: center;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .heart-day {
+            position: relative;
+        }
+
+        .heart-wrap {
+            color: white;
+            font-weight: bold;
+            background: #e74c3c;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(231, 76, 60, 0.4);
+            animation: heartBeat 1.5s ease infinite;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .schedule-info {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .schedule-sub {
+            color: #888;
+            display: block;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        .countdown-box {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .cd-item {
+            text-align: center;
+        }
+
+        .cd-number {
+            font-size: 50px;
+            font-weight: 300;
+            color: #e74c3c;
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .cd-label {
+            font-size: 16px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ============================
+           FOOTER
+        ============================ */
+        footer {
+            background: #e97e7e;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 13px;
+        }
+
+        footer .heart {
+            color: #e74c3c;
+            animation: pulse 1.5s ease infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* ============================
+           ANIMATIONS
+        ============================ */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================
+           RESPONSIVE
+        ============================ */
+        @media (max-width: 768px) {
+            .wedding-names {
+                font-size: clamp(24px, 8.5vw, 40px);
+                white-space: nowrap; /* giữ trên 1 dòng */
+            }
+
+            .date-day,
+            .date-month {
+                font-size: 50px;
+            }
+
+            .date-year {
+                font-size: 20px;
+            }
+
+            .story-box {
+                padding: 40px 25px;
+            }
+
+            .story-title {
+                font-size: 22px;
+            }
+
+            .calendar-month {
+                font-size: 22px;
+            }
+
+            .cd-number {
+                font-size: 40px;
+            }
+
+            .countdown-box {
+                gap: 25px;
+            }
+
+            .album-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .couple-container {
+                max-width: 360px;
+            }
+
+            .groom-card {
+                grid-template-columns: 1fr 200px;
+                gap: 0px;
+            }
+
+            .bride-card {
+                grid-template-columns: 200px 1fr;
+                gap: 0px;
+            }
+
+            .groom-photo,
+            .bride-photo {
+                height: 230px;
+            }
+
+            .couple-name {
+                font-size: 29px;
+            }
+
+            .invitation-title {
+                font-size: 36px;
+            }
+
+            .album-container {
+        max-width: 340px;
+        padding: 0 10px;
+    }
+
+    .album-grid {
+        grid-template-columns: 1fr 1.8fr;
+        gap: 10px;
+    }
+
+    .album-left .album-photo {
+        height: 110px;
+    }
+
+    .album-center .album-photo {
+        height: 380px;
+    }
+
+    .album-floating-1 {
+        bottom: 80px;
+        left: -20px;
+        width: 85px;
+    }
+
+    .album-floating-2 {
+        bottom: 10px;
+        right: -20px;
+        width: 80px;
+    }
+
+    .album-floating img {
+        height: 110px;
+    }
+
+
+        }
+
+.love-quote {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.love-quote p {
+    font-size: 20px;
+    /* font-style: bold; */
+    color: #2c5aa0;
+    line-height: 1.7;
+    /* margin-top: 0px; */
+    /* font-family: 'Pinyon Script', cursive; */
+    /* font-family: "Dancing Script", cursive; */
+    /* font-family: "Great Vibes", cursive; */
+    /* font-family: "Parisienne", cursive; */
+    /* font-family: "Pinyon Script", cursive; */
+    font-family: "Rouge Script", cursive;
+    font-weight: 510;
+    /* font-family: "Allura", cursive; */
+
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ============================
+           LOCATION SECTION
+============================ */
+.location-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    
+    background: linear-gradient(135deg, #f5f7fa 0%, #f6f9ff 100%);
+    /* border-radius: 10px 10px 0 0; */
+    padding: -10px 20px 25px;
+    margin-top: 10px;
+}
+
+
+.location-title {
+    font-family: 'Pinyon Script', cursive;
+    font-size: clamp(36px, 6vw, 44px);
+    color: #2c5aa0;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+
+}
+
+.location-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.7s ease;
+}
+.location-card.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.location-card:hover {
+    transform: translateY(-5px);
+}
+
+.location-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Giữ tỷ lệ icon */
+}
+
+
+.location-info {
+    flex: 1;
+}
+
+.location-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.location-name {
+    font-size: clamp(15px, 3vw, 17px);
+    font-weight: 700;
+    color: #2c5aa0;
+    letter-spacing: 0.5px;
+}
+
+.location-view-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 15px;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.location-view-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.location-address {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.7;
+}
+ 
+
+
+
+.intro-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+
+    background: linear-gradient(135deg, #f8f9fb 0%, #cfd9ea 100%);
+
+    padding: 70px 24px 60px;
+    margin-top: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.intro-section::before,
+.intro-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    background: radial-gradient(circle, #ffffff 0%, transparent 70%);
+}
+
+.intro-section::before {
+    width: 260px;
+    height: 260px;
+    top: -80px;
+    left: -80px;
+}
+
+.intro-section::after {
+    width: 320px;
+    height: 320px;
+    bottom: -120px;
+    right: -120px;
+}
+
+.intro-title {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #2c5aa0;
+    margin-bottom: 30px;
+    margin-top: -55px;
+    /* border-radius: 40px 40px 0 0; */
+    /* font-family: "Rouge Script", cursive; */
+
+    font-family: 'Pinyon Script', cursive;
+    /* font-family: "Dancing Script", cursive; */
+    /* font-family: "Great Vibes", cursive; */
+    /* font-family: "Parisienne", cursive; */
+    /* font-family: "Pinyon Script", cursive; */
+}
+
+/* =========================
+   NỘI DUNG
+========================= */
+.intro-text {
+    max-width: 780px;
+    margin: 0 auto;
+    margin-top: -20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16.5px;
+    line-height: 1.9;
+    color: #3a3a3a;
+}
+
+/* =========================
+   HIỆU ỨNG FADE-IN
+========================= */
+.fade-in {
+    animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+    .intro-title {
+        font-size: 28px;
+    }
+
+    .intro-text {
+        font-size: 15.5px;
+    }
+}
+
+/* Chống scroll ngang */
+body {
+    overflow-x: hidden;
+}
+        .container-tks {
+            position: relative;
+            width: 100%;
+            height: 75vh;
+            overflow: hidden;
+        }
+
+        .background-tks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("img/tks.jpg") no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .background-tks::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Decorative text */
+        .decorative-text {
+            position: absolute;
+            font-family: 'Brush Script MT', cursive;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 3em;
+            top: 50px;
+            left: 30px;
+            z-index: 1;
+        }
+
+        /* Main content */
+        .content-tks {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: white;
+            text-align: center;
+            margin-top: 90px;
+        }
+
+        .thank-you-text {
+            /* font-family: 'Playfair Display', serif; */
+            /* font-family: 'Great Vibes', cursive; */
+            /* font-family: 'Pinyon Script', cursive; */
+            /* font-family: 'Cormorant Garamond', serif; */
+            font-family: 'Dancing Script', cursive;
+            /* font-family: 'Libre Baskerville', serif; */
+            /* font-family: 'Quicksand', sans-serif; */
+            /* font-family: 'Roboto', sans-serif; */
+            /* font-family: 'Lora', serif; */
+            /* font-family: 'Montserrat', sans-serif; */
+            /* font-family: "Feeling Passionate"; */
+            font-size: 10em;
+            /* margin-bottom: 20px; */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .couple-names {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            animation: fadeIn 1.5s ease-out;
+
+            /* font-family: 'Playfair Display', serif; */
+            /* font-family: 'Great Vibes', cursive; */
+            /* font-family: 'Pinyon Script', cursive; */
+            /* font-family: 'Cormorant Garamond', serif; */
+            font-family: 'Dancing Script', cursive;
+            margin-top: 20px;
+
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-text {
+                font-size: 3.5em;
+            }
+            .couple-names {
+                font-size: 1.2em;
+            }
+            .decorative-text {
+                font-size: 2em;
+            }
+        }
+
+
+        .instagram-link {
+    position: absolute;
+    bottom: 10px;           /* ✅ xuống đáy khung */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.instagram-link i {
+    font-size: 14px;
+}
+
+.instagram-link:hover {
+    color: #fff;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-2px);
+}
+
+
+
+
+
+
+/* Animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ảnh chú rể */
+.groom-photo {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: all 3s ease;
+}
+
+/* Ảnh cô dâu */
+.bride-photo {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 3s ease;
+}
+
+/* Khi hiện */
+.show-photo {
+    opacity: 1;
+    transform: translateX(0);
+}
+.groom-info,
+.bride-info {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+/* Khi hiện chữ */
+.show-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ===============================
+   INVITATION SECTION ANIMATION
+================================ */
+
+.invite-section {
+    text-align: center;
+    overflow: hidden;
+
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    padding: 30px 2px 2px;
+    margin-top: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* ---------- TEXT ---------- */
+.invitation-box {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s ease;
+}
+
+.invitation-box.show-invite {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.invitation-title {
+    font-family: 'Pinyon Script', cursive;
+    font-size: clamp(36px, 5vw, 48px);
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+
+/* ---------- PHOTOS ---------- */
+.event-photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 35px;
+}
+
+/* chung */
+.event-photo {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+/* trái */
+.left-photo {
+    transform: translateX(-120px) rotate(-5deg);
+}
+.left-photo.show-left {
+    opacity: 1;
+    transform: translateX(0) rotate(-5deg);
+}
+
+/* giữa */
+.center-photo {
+    width: 300px;
+    height: 300px;
+    transform: scale(0.85);
+}
+.center-photo.show-center {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* phải */
+.right-photo {
+    transform: translateX(120px) rotate(5deg);
+}
+.right-photo.show-right {
+    opacity: 1;
+    transform: translateX(0) rotate(5deg);
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 480px) {
+    .event-photos {
+        gap: 25px;
+    }
+
+    .event-photo {
+        width: 100px;
+        height: 235px;
+    }
+
+    .center-photo {
+        width: 100px;
+        height: 235px;
+    }
+}
+/* ========= TYPEWRITER EFFECT ========= */
+/* ===== LỜI NGỎ TYPE EFFECT ===== */
+
+.intro-text {
+    font-size: 16px;
+    line-height: 2;
+    color: #444;
+
+    /* quan trọng để không bị nhảy layout */
+    min-height: 200px;
+
+    /* chuẩn văn bản */
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* hiệu ứng con trỏ */
+.intro-text::after {
+    content: "|";
+    margin-left: 2px;
+    animation: blink 0.8s infinite;
+}
+
+.intro-text.finished::after {
+    content: "";
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* ===== KEYFRAMES ===== */
+@keyframes albumGridReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.93) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes floatLeftIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-120px) rotate(-15deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(-8deg);
+    }
+}
+
+@keyframes floatRightIn {
+    0% {
+        opacity: 0;
+        transform: translateX(120px) rotate(15deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(8deg);
+    }
+}
+/* ==== ANIMATION SETUP ==== */
+.album-item {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Khi xuất hiện */
+.album-item.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.album-item:nth-child(even) {
+    transform: translateX(40px);
+}
+
+.album-item:nth-child(odd) {
+    transform: translateX(-40px);
+}
+
+.album-item.show {
+    transform: translateX(0);
+}
+
+
+/* =========================
+   FADE IN ON SCROLL
+========================= */
+
+/* Delay nhẹ cho thẻ thứ 2 */
+.event-card.fade-in:nth-child(2).show,
+.location-card.fade-in:nth-child(2).show {
+    transition-delay: 0.2s;
+}
